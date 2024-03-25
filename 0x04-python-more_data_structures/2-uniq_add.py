@@ -5,6 +5,5 @@ def uniq_add(my_list=[]):
     for i in my_list:
         if (i not in new_set):
             new_set.add(i)
-    for x in new_set:
-        result += x
+            result += i
     return result
