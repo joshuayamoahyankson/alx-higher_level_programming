@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""A class defined with the name Square"""
+
 class Square:
-    """A class that defines a Square but does nothing"""
+    """does nothing for now"""
     pass
