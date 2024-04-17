@@ -3,4 +3,6 @@ def read_file(filename=""):
     with open(filename, encoding="utf-8") as text_file:
         read_text = text_file.read()
         print(read_text)
+        if read_text[-1] != '\n':
+            print()
     return read_text
