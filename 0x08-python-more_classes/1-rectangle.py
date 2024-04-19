@@ -20,15 +20,13 @@ class Rectangle:
 
     @property
     def width(self):
-        """A getter method that returns width
-        as a private instance attribute"""
+        """A getter method that retrieves the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
 
-        """A setter method that checks for an int
-        data type instance and raises specified errors"""
+        """A setter method that sets the width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if (value < 0):
@@ -37,14 +35,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """A getter method that returns height
-        as a private instance attribute"""
+        """A getter method that retrieves the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """A setter method that checks for an int
-        data type instance and raises specified errors"""
+        """A setter method that sets the height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if (value < 0):
