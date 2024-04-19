@@ -13,7 +13,8 @@ class Rectangle:
             heigth: represents the height of the rectangle
         Errors Raised:
             TypeError: if value is not integer
-            ValueError: if value is less tha zero"""
+            ValueError: if value is less tha zero
+        """
         self.__width = width
         self.__height = height
 
@@ -29,9 +30,9 @@ class Rectangle:
         """A setter method that checks for an int
         data type instance and raises specified errors"""
         if not isinstance(value, int):
-            raise TypeError('width must be an integer')
+            raise TypeError("width must be an integer")
         if (value < 0):
-            raise ValueError('width must be >= 0')
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -45,7 +46,7 @@ class Rectangle:
         """A setter method that checks for an int
         data type instance and raises specified errors"""
         if not isinstance(value, int):
-            raise TypeError('height must be an integer')
+            raise TypeError("height must be an integer")
         if (value < 0):
-            raise ValueError('height must be >= 0')
+            raise ValueError("height must be >= 0")
         self.__height = value
