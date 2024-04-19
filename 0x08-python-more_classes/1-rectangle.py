@@ -3,9 +3,17 @@
 
 
 class Rectangle:
+    """A rectangle class represented"""
+
     def __init__(self, width=0, height=0):
         """A class constructor that takes in width and height
-        as default arguments and initializes them"""
+        as default arguments and initializes them
+        Args:
+            width: represents the width of the rectangle
+            heigth: represents the height of the rectangle
+        Errors Raised:
+            TypeError: if value is not integer
+            ValueError: if value is less tha zero"""
         self.__width = width
         self.__height = height
 
