@@ -61,13 +61,7 @@ class Rectangle:
         """A diagramatic representation of the rectangle class"""
         if ((self.__width or self.__height) == 0):
             return ""
-        rect_str = ""
-        for column in (self.__height):
-            for row in (self.__width):
-                rect_str += "#"
-            if column < self.__height - 1:
-                rect_str += "\n"
-            return rect_str
+        return '\n'.join(['#' * self.width] * self.height)
 
     def __repr__(self):
         """A method that returns a string that represents the object"""

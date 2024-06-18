@@ -61,10 +61,4 @@ class Rectangle:
         """A diagramatic representation of the rectangle class"""
         if (self.__width or self.__height) == 0:
             return ""
-        rect_str = ""
-        for column in range(self.__height):
-            for row in range(self.__width):
-                rect_str += "#"
-            if column < self.__height - 1:
-                rect_str += "\n"
-        return rect_str
+        return '\n'.join(['#' * self.width] * self.height)
