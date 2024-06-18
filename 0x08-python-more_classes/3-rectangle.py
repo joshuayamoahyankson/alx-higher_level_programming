@@ -53,12 +53,12 @@ class Rectangle:
     def perimeter(self):
         """A method that returns the perimeter of the rectangle"""
         if (self.__width and self.__height != 0):
-            return 2 * (int(self.__width) + 2 * int(self.__height))
+            return 2 * (int(self.__width) + int(self.__height))
         else:
             return 0
 
     def __str__(self):
         """A diagramatic representation of the rectangle class"""
-        if (self.__width or self.__height) == 0:
+        if ((self.__width or self.__height) == 0:)
             return ""
         return '\n'.join(['#' * self.width] * self.height)
