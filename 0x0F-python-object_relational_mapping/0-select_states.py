@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+"""A script that lists all states from the database hbtn_0e_0_usa"""
+
 import MySQLdb
 import sys
 
 
 if __name__ == "__main__":
+    """Connect to the database and
+    retrieve the needed information
+    """
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
@@ -14,7 +19,7 @@ if __name__ == "__main__":
 
     query = "SELECT * FROM states ORDER BY id ASC"
     cursor.execute(query)
-    results = cursor.fetchall
+    results = cursor.fetchall()
 
     for lists in results:
         print(lists)
