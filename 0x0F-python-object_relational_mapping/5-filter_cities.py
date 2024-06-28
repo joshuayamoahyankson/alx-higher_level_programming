@@ -15,16 +15,17 @@ if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
+    states_name = sys.argv[4]
     db = MySQLdb.connect(host="localhost", user=mysql_username,
                          passwd=mysql_password,
                          db=database_name, port=3306)
     cursor = db.cursor()
 
-    query = "SELECT cities.id, cities.name, states.name" + \
-                "FROM cities JOIN states ON cities.state_id" + \
-                "= states.id WHERE states.name LIKE BINARY '{}' " + \
-                "ORDER BY cities.id ASC".format(sys.argv[4])
-    cursor.execute(query)
+    query = "SELECT cities.id, cities.name, states.name \
+                FROM cities JOIN states ON cities.state_id \
+                = states.id WHERE states.name LIKE BINARY %s \
+                ORDER BY cities.id ASC"
+    cursor.execute(query, (states.name,))
     results = cursor.fetchall()
 
     for lists in results:
