@@ -7,10 +7,11 @@ header of the response"""
 from urllib.request import urlopen
 from sys import argv
 
-url = argv[1]
 
 if __name__ == "__main__":
-    with urlopen(url) as response:
+    url = argv[1]
+    request = urlopen(url)
+    with request as response:
         res = response.info()
         retrieve = res.get('X-Request-Id')
         print(retrieve)
