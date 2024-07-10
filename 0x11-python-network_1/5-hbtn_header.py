@@ -6,8 +6,13 @@ in the response header
 """
 
 import sys
-import urllib.request
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    req = urllib.request.Request(url)
+    response = requests.get(url)
+    if "X-Request-Id" in response.headers:
+        request = response.headers["X-Request-Id"]
+        print(request)
+    else:
+        print()
