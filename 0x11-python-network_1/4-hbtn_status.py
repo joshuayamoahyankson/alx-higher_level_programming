@@ -2,11 +2,11 @@
 """A Python script that fetches
 https://alx-intranet.hbtn.io/status
 """
-import urllib.request
+import requests
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
-        request = response.read()
+    response = requests.get("https://alx-intranet.hbtn.io/status")
+    request = response.content
     print("Body response:")
     print(f"\t- type: {type(request)}")
     print(f"\t- content: {request}")
