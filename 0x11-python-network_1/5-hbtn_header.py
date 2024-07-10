@@ -11,8 +11,4 @@ import requests
 if __name__ == "__main__":
     url = sys.argv[1]
     response = requests.get(url)
-    if "X-Request-Id" in response.headers:
-        request = response.headers["X-Request-Id"]
-        print(request)
-    else:
-        print()
+    print(response.headers.get("X-Request-Id"))
