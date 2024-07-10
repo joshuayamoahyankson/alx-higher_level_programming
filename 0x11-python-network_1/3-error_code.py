@@ -15,4 +15,4 @@ if __name__ == "__main__":
             body = response.read().decode('utf-8')
         print(body)
     except HTTPError as httperr:
-        print(f'Error code: {e.code}')
+        print(f'Error code: {httperr.code}')
