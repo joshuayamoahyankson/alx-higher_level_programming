@@ -14,5 +14,5 @@ if __name__ == "__main__":
         with urlopen(url) as response:
             body = response.read().decode('utf-8')
         print(body)
-    except urllib.error.HTTPerror as httperr:
-        print(f'Error code:', {e.code})
+    except HTTPError as httperr:
+        print(f'Error code: {e.code}')
